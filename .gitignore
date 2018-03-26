@@ -1,0 +1,11 @@
+.idea
+
+lib/
+
+include/
+
+bin/
+
+.Python
+
+__pycache__
