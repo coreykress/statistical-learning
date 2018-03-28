@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-class LinearLeastSquares():
+class LinearLeastSquares:
 
     def __init__(self, file_path, feature_columns, iterations, learning_rate):
         self.file_path = file_path
@@ -17,7 +17,6 @@ class LinearLeastSquares():
         x_data = self.data_frame.loc[:, x_col].values.reshape(-1, 1)
         y_data = self.data_frame.loc[:, y_col].values.reshape(-1, 1)
         x_data = np.concatenate([self.ones, x_data], 1)
-        print(x_data)
         theta = np.array([[0.0, 0.0]])
         g, cost = self.gradient_descent(x_data, y_data, theta, self.learning_rate, self.iterations)
 
